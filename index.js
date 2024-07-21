@@ -22,9 +22,12 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 app.use(router)
-const PORT = 4000
-console.log('sanyam 98rjj')
+app.use('hii', (res, req) => {
+  res.send('hiiiii')
+})
+const PORT = process.env.PORT
 app.listen(PORT, () => {
+  console.log('sanyam 98rjj')
   Connection()
   console.log('running server at port', PORT)
 })
