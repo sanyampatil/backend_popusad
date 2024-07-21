@@ -1,12 +1,10 @@
+import { config } from 'dotenv'
+config()
 import express from 'express'
 import { Connection } from './postgress/postgress.js'
 import router from './Routes/mainRoutes.js'
 import cors from 'cors'
 import cookieParser from 'cookie-parser'
-import { config } from 'dotenv'
-config({
-  path: './env'
-})
 const app = express()
 
 app.use(
@@ -25,9 +23,9 @@ app.use(router)
 app.use('hii', (res, req) => {
   res.send('hiiiii')
 })
-const PORT = process.env.PORT
-app.listen(PORT, () => {
+const port = process.env.PORT
+app.listen(port, () => {
   console.log('sanyam 98rjj')
   Connection()
-  console.log('running server at port', PORT)
+  console.log('running server at port', port)
 })
