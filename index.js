@@ -18,7 +18,9 @@ app.use(
 app.use(cookieParser())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
-
+app.get('/', (req, res) => {
+  res.send('hiii i am sanyam')
+})
 app.use(router)
 app.use('hii', (res, req) => {
   res.send('hiiiii')
