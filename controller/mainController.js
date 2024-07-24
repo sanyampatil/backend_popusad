@@ -1,4 +1,6 @@
-import { yojanaoneModelsample } from '../postgress/postgress.js'
+// import { createYojnaModel } from '../model/yojna1.model.js'
+
+import { yojanaoneModelsample } from '../postgress/dbconnection.js'
 
 const getInfo = async (req, res) => {
   console.log('body', req.body)

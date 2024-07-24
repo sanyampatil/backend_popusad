@@ -1,10 +1,12 @@
 import { config } from 'dotenv'
 config()
 import express from 'express'
-import { Connection } from './postgress/postgress.js'
+import { Connection } from './postgress/dbconnection.js'
+
 import router from './Routes/mainRoutes.js'
 import cors from 'cors'
 import cookieParser from 'cookie-parser'
+// import pool from './postgress/postgress.js'
 const app = express()
 
 app.use(
